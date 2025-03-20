@@ -1,14 +1,5 @@
-const letras = [ //Declara um array de arrays de letras
-  ['a', 'b', 'c'],
-  ['c', 'd', 'f'],
-  ['d', 'f', 'g'],
- ];
- 
- let resultado = letras.flat().reduce((objeto, numero) => { //Usa o flat para compactar o array, e usa o reduce para contar quantas vezes a letra aparece no array
-  if (objeto[numero]) {
-    objeto[numero] += 1;
-  } else {
-    objeto[numero] = 1;
-  }
-  return objeto;// Retorno da contagem
- }, {});
+const numbers = [1,2,3,4,5]; //Declara um array de numeros
+const output = numbers.map((x) => { //Usa o map com um arrow function para dobrar os elementos do array
+  return x * 2;  
+});
+console.log(output); //Exibe o array com os valores dobrados

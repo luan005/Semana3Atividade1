@@ -1,12 +1,6 @@
-const tamanho = prompt('Digite o tamanho da lista de números'); //Solicita o tamanho da lista
-const lista = new Array(tamanho).fill(null);// Cria um array com o tamanho baseado no solicitado
-lista
-//Ajuestes do arrow function adicionados
- .map((item, index) => index + 1 ) // Utiliza o map para preencher o array de 1 até "tamanho", que foi solicitado e informado
- .reduce((acumulador, item) => acumulador * item);// Utiliza o reduce para multiplicar todos os elemtos do array
-
-
-new Array(tamanho)//Cria um novo array, preenche o array de 1 até "tamanaho" e usa o reduce para somar todos os elementos
- .fill(null)
- .map((item, index) => index + 1)
- .reduce((acumulador, item) => acumulador + item);
+const numeros = [1,2,3,4,5]; //Declara um array de números
+function calcularDobro(numero) { //Função que receberá um numero e retornará o dobro do numero
+  return numero * 2;  
+}
+const numerosDobro = numeros.map(calcularDobro); // Aplica a função no array
+console.log(numerosDobro);// Exibe o array dps de aplicado a função
